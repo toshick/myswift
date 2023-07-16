@@ -1,0 +1,4 @@
+module myswift {
+    header "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift-Swift.h"
+    requires objc
+}

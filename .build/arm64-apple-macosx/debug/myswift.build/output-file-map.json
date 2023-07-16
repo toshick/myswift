@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/master.swiftdeps"
+  },
+  "/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/myswift.swift": {
+    "dependencies": "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.d",
+    "object": "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swift.o",
+    "swiftmodule": "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift~partial.swiftmodule",
+    "swift-dependencies": "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swiftdeps"
+  }
+}

@@ -1,0 +1,80 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<myswift-debug.module>"]
+  "myswift-debug.module": ["<myswift-debug.module>"]
+  "myswiftPackageTests-debug.test": ["<myswiftPackageTests-debug.test>"]
+  "myswiftTests-debug.module": ["<myswiftTests-debug.module>"]
+  "test": ["<myswift-debug.module>","<myswiftPackageTests-debug.test>","<myswiftTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/toshick/go/src/github.com/toshick/myswift/Tests/myswiftTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "<myswift-debug.module>":
+    tool: phony
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swift.o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.swiftmodule"]
+    outputs: ["<myswift-debug.module>"]
+
+  "<myswiftPackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftPackageTests.xctest/Contents/MacOS/myswiftPackageTests"]
+    outputs: ["<myswiftPackageTests-debug.test>"]
+
+  "<myswiftTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.build/myswiftTests.swift.o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.swiftmodule"]
+    outputs: ["<myswiftTests-debug.module>"]
+
+  "C.myswift-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/myswift.swift"]
+    outputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swift.o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "myswift"
+    module-output-path: "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.swiftmodule"
+    import-paths: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build"
+    objects: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swift.o"]
+    other-args: ["-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift-Swift.h","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/myswift.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.myswiftPackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.build/myswift.swift.o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.build/myswiftTests.swift.o"]
+    outputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftPackageTests.xctest/Contents/MacOS/myswiftPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/myswiftPackageTests.xctest/Contents/MacOS/myswiftPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug","-o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftPackageTests.xctest/Contents/MacOS/myswiftPackageTests","-module-name","myswiftPackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftPackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx12.0","-Xlinker","-add_ast_path","-Xlinker","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.myswiftTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/Tests/myswiftTests/myswiftTests.swift","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswift.swiftmodule"]
+    outputs: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.build/myswiftTests.swift.o","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "myswiftTests"
+    module-output-path: "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.swiftmodule"
+    import-paths: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.build"
+    objects: ["/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/myswiftTests.build/myswiftTests.swift.o"]
+    other-args: ["-target","arm64-apple-macosx12.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/toshick/go/src/github.com/toshick/myswift/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/toshick/go/src/github.com/toshick/myswift/Tests/myswiftTests/myswiftTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/","/Users/toshick/go/src/github.com/toshick/myswift/Tests/myswiftTests/","/Users/toshick/go/src/github.com/toshick/myswift/Package.swift","/Users/toshick/go/src/github.com/toshick/myswift/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

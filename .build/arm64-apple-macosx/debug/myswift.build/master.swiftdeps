@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "50f93c5059ad98b71288217d5da6644c1fa1d534ca839cd2fd0a2e08f821b2a3"
+build_start_time: [1689519899, 817363000]
+build_end_time: [1689519900, 109723000]
+inputs:
+  "/Users/toshick/go/src/github.com/toshick/myswift/Sources/myswift/myswift.swift": [1689519583, 201399313]
