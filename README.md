@@ -21,6 +21,8 @@ SPM経由でフォーマッタを導入しようとする
 
     - 効果なし
 
+  - swift package init
+
 - Reset Package Cache という技がある
 
 - , you need to have two distinct builds - one with the package manager and one with Xcode

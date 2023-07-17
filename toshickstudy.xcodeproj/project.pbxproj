@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1548772A6506920034DAF9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548762A6506910034DAF9 /* CircleImage.swift */; };
+		1F1548792A65091C0034DAF9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548782A65091C0034DAF9 /* MapView.swift */; };
 		1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */; };
 		1FCC67912A641210002AA4C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* ContentView.swift */; };
 		1FCC67932A641212002AA4C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC67922A641212002AA4C9 /* Assets.xcassets */; };
@@ -14,8 +16,6 @@
 		1FCC67A02A641212002AA4C9 /* toshickstudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC679F2A641212002AA4C9 /* toshickstudyTests.swift */; };
 		1FCC67AA2A641212002AA4C9 /* toshickstudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67A92A641212002AA4C9 /* toshickstudyUITests.swift */; };
 		1FCC67AC2A641212002AA4C9 /* toshickstudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67AB2A641212002AA4C9 /* toshickstudyUITestsLaunchTests.swift */; };
-		1FCC67C02A6436E6002AA4C9 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67BF2A6436E6002AA4C9 /* Package.swift */; };
-		1FCC67C22A643708002AA4C9 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67C12A643708002AA4C9 /* Empty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1548762A6506910034DAF9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		1F1548782A65091C0034DAF9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		1FCC678B2A641210002AA4C9 /* toshickstudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toshickstudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyApp.swift; sourceTree = "<group>"; };
 		1FCC67902A641210002AA4C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,8 +48,6 @@
 		1FCC67A52A641212002AA4C9 /* toshickstudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toshickstudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC67A92A641212002AA4C9 /* toshickstudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyUITests.swift; sourceTree = "<group>"; };
 		1FCC67AB2A641212002AA4C9 /* toshickstudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1FCC67BF2A6436E6002AA4C9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		1FCC67C12A643708002AA4C9 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,6 @@
 		1FCC67822A641210002AA4C9 = {
 			isa = PBXGroup;
 			children = (
-				1FCC67BE2A6436D1002AA4C9 /* BuildTools */,
 				1FCC678D2A641210002AA4C9 /* toshickstudy */,
 				1FCC679E2A641212002AA4C9 /* toshickstudyTests */,
 				1FCC67A82A641212002AA4C9 /* toshickstudyUITests */,
@@ -101,6 +100,8 @@
 			children = (
 				1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */,
 				1FCC67902A641210002AA4C9 /* ContentView.swift */,
+				1F1548782A65091C0034DAF9 /* MapView.swift */,
+				1F1548762A6506910034DAF9 /* CircleImage.swift */,
 				1FCC67922A641212002AA4C9 /* Assets.xcassets */,
 				1FCC67942A641212002AA4C9 /* Preview Content */,
 			);
@@ -132,15 +133,6 @@
 			path = toshickstudyUITests;
 			sourceTree = "<group>";
 		};
-		1FCC67BE2A6436D1002AA4C9 /* BuildTools */ = {
-			isa = PBXGroup;
-			children = (
-				1FCC67BF2A6436E6002AA4C9 /* Package.swift */,
-				1FCC67C12A643708002AA4C9 /* Empty.swift */,
-			);
-			path = BuildTools;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,7 +140,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1FCC67AF2A641212002AA4C9 /* Build configuration list for PBXNativeTarget "toshickstudy" */;
 			buildPhases = (
-				1FCC67BD2A64217F002AA4C9 /* ShellScript */,
 				1FCC67872A641210002AA4C9 /* Sources */,
 				1FCC67882A641210002AA4C9 /* Frameworks */,
 				1FCC67892A641210002AA4C9 /* Resources */,
@@ -267,36 +258,15 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		1FCC67BD2A64217F002AA4C9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		1FCC67872A641210002AA4C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCC67C02A6436E6002AA4C9 /* Package.swift in Sources */,
-				1FCC67C22A643708002AA4C9 /* Empty.swift in Sources */,
 				1FCC67912A641210002AA4C9 /* ContentView.swift in Sources */,
+				1F1548792A65091C0034DAF9 /* MapView.swift in Sources */,
 				1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */,
+				1F1548772A6506920034DAF9 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
