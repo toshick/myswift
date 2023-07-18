@@ -12,6 +12,7 @@
 		1F15487D2A657A8D0034DAF9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15487C2A657A8D0034DAF9 /* DetailView.swift */; };
 		1F1548812A66AEB70034DAF9 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548802A66AEB70034DAF9 /* TableView.swift */; };
 		1F1548842A66B53C0034DAF9 /* ScrollView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548832A66B53C0034DAF9 /* ScrollView1.swift */; };
+		1F1548872A66C66C0034DAF9 /* MyParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548862A66C66C0034DAF9 /* MyParts.swift */; };
 		1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */; };
 		1FCC67912A641210002AA4C9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* TopView.swift */; };
 		1FCC67932A641212002AA4C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC67922A641212002AA4C9 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		1F15487C2A657A8D0034DAF9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1F1548802A66AEB70034DAF9 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		1F1548832A66B53C0034DAF9 /* ScrollView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView1.swift; sourceTree = "<group>"; };
+		1F1548862A66C66C0034DAF9 /* MyParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParts.swift; sourceTree = "<group>"; };
 		1FCC678B2A641210002AA4C9 /* toshickstudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toshickstudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyApp.swift; sourceTree = "<group>"; };
 		1FCC67902A641210002AA4C9 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = scroll;
 			sourceTree = "<group>";
 		};
+		1F1548852A66C65B0034DAF9 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				1F1548862A66C66C0034DAF9 /* MyParts.swift */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
 		1FCC67822A641210002AA4C9 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		1FCC678D2A641210002AA4C9 /* toshickstudy */ = {
 			isa = PBXGroup;
 			children = (
+				1F1548852A66C65B0034DAF9 /* parts */,
 				1F1548822A66B51B0034DAF9 /* scroll */,
 				1F15487B2A657A660034DAF9 /* detail */,
 				1F15487A2A6578A00034DAF9 /* top */,
@@ -296,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1548872A66C66C0034DAF9 /* MyParts.swift in Sources */,
 				1F1548842A66B53C0034DAF9 /* ScrollView1.swift in Sources */,
 				1FCC67912A641210002AA4C9 /* TopView.swift in Sources */,
 				1F1548812A66AEB70034DAF9 /* TableView.swift in Sources */,
