@@ -9,9 +9,12 @@ import SwiftUI
 
 struct MyButton: View {
   @State var label: String
+  var action: (() -> Void)?
 
   var body: some View {
-    Button(action: {}) {
+    Button(action: {
+      action?()
+    }) {
       Text(" \(label)").foregroundColor(Color.yellow)
         .font(Font.system(size: 20).bold())
     }
@@ -22,7 +25,8 @@ struct MyButton: View {
 struct RoundedButtonStyle: ButtonStyle {
   func makeBody(configuration: Configuration) -> some View {
     configuration.label
-      .padding()
+      .padding(.vertical, 16)
+      .padding(.horizontal, 60)
       .foregroundColor(.white)
       .background(.white)
       .cornerRadius(12)

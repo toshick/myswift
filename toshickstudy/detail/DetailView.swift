@@ -17,18 +17,13 @@ struct DetailView: View {
         .font(.title)
         .padding()
       Spacer()
-      Button {
-        dismiss()
-      } label: {
-        Text("シートを閉じる")
-      }
+
       Text("親のisPlayingの状態  \(isPlaying ? "いえす" : "ノー")")
 
-      MyButton(label: "ぼぼぼ").onTapGesture(count: 1, perform: {
-        // 処理
-        print("おされた")
-
-      })
+      // 自作ボタン
+      MyButton(label: "とじる") {
+        dismiss()
+      }
 
       Spacer()
       PlayButton(isPlaying: $isPlaying)
