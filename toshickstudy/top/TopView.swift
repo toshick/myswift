@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TopView: View {
   @State private var shouldShowSecondView: Bool = false
+  @State private var showSheet: Bool = false
 
   var body: some View {
     VStack {
@@ -36,9 +37,6 @@ struct TopView: View {
             .padding()
 
         }.padding()
-        // NavigationLink(destination: DetailView()) {
-        //   Text("しょうさいへッ")
-        // }
 
         NavigationLink {
           DetailView()
@@ -47,11 +45,13 @@ struct TopView: View {
         }
 
         Spacer()
-        // Button {
-        //   shouldShowSecondView = true
-        // } label: {
-        //   Text("ぼたんです")
-        // }
+        Button {
+          showSheet = true
+        } label: {
+          Text("シートをだす")
+        }.sheet(isPresented: $showSheet, content: {
+          DetailView()
+        })
         Spacer()
       }
     }
