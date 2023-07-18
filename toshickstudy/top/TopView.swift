@@ -13,47 +13,38 @@ struct TopView: View {
   @State private var showSheet: Bool = false
 
   var body: some View {
-    VStack {
-      NavigationStack {
-        MapView()
-          .frame(height: 300)
+    NavigationStack {
+      ScrollView {
+        VStack {
+          MapView()
+            .frame(height: 300)
 
-        CircleImage()
-          .offset(y: -130)
-          .padding(.bottom, -130)
+          CircleImage()
+            .offset(y: -130)
+            .padding(.bottom, -130)
 
-        Image(systemName: "globe")
-          .imageScale(.large)
-          .foregroundColor(.accentColor)
-        Text("Hello,  toshick!--------")
-        Text("ハローの下")
-        HStack {
-          Text("すいへいにッ")
-            .padding()
-            .foregroundColor(.green)
-          Spacer()
-          Text("はいちするッ")
-            .font(.title)
-            .padding()
+          Image(systemName: "globe")
+            .imageScale(.large)
+            .foregroundColor(.accentColor)
 
-        }.padding()
+          NavigationLink {
+            DetailView()
+          } label: {
+            Text("next testAview")
+          }.padding(30)
 
-        NavigationLink {
-          DetailView()
-        } label: {
-          Text("next testAview")
+          TableView()
+            .frame(height: 200)
+          Button {
+            showSheet = true
+          } label: {
+            Text("シートをだす")
+          }.padding(20)
+            .sheet(isPresented: $showSheet, content: {
+              ScrollView1()
+            })
         }
-
-        Spacer()
-        Button {
-          showSheet = true
-        } label: {
-          Text("シートをだす")
-        }.sheet(isPresented: $showSheet, content: {
-          DetailView()
-        })
-        Spacer()
-      }
+      }.background(Color.yellow)
     }
   }
 }

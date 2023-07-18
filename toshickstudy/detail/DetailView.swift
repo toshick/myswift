@@ -22,6 +22,8 @@ struct DetailView: View {
       }
       Spacer()
     }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(Color.yellow)
   }
 }
 
