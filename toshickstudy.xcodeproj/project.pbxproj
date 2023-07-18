@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		1F1548772A6506920034DAF9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548762A6506910034DAF9 /* CircleImage.swift */; };
 		1F1548792A65091C0034DAF9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548782A65091C0034DAF9 /* MapView.swift */; };
+		1F15487D2A657A8D0034DAF9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F15487C2A657A8D0034DAF9 /* DetailView.swift */; };
 		1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */; };
-		1FCC67912A641210002AA4C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* ContentView.swift */; };
+		1FCC67912A641210002AA4C9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* TopView.swift */; };
 		1FCC67932A641212002AA4C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC67922A641212002AA4C9 /* Assets.xcassets */; };
 		1FCC67962A641212002AA4C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC67952A641212002AA4C9 /* Preview Assets.xcassets */; };
 		1FCC67A02A641212002AA4C9 /* toshickstudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC679F2A641212002AA4C9 /* toshickstudyTests.swift */; };
@@ -38,9 +39,10 @@
 /* Begin PBXFileReference section */
 		1F1548762A6506910034DAF9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		1F1548782A65091C0034DAF9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		1F15487C2A657A8D0034DAF9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1FCC678B2A641210002AA4C9 /* toshickstudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toshickstudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyApp.swift; sourceTree = "<group>"; };
-		1FCC67902A641210002AA4C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1FCC67902A641210002AA4C9 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		1FCC67922A641212002AA4C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FCC67952A641212002AA4C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1FCC679B2A641212002AA4C9 /* toshickstudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = toshickstudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F15487A2A6578A00034DAF9 /* top */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC67902A641210002AA4C9 /* TopView.swift */,
+				1F1548782A65091C0034DAF9 /* MapView.swift */,
+				1F1548762A6506910034DAF9 /* CircleImage.swift */,
+			);
+			path = top;
+			sourceTree = "<group>";
+		};
+		1F15487B2A657A660034DAF9 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				1F15487C2A657A8D0034DAF9 /* DetailView.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
 		1FCC67822A641210002AA4C9 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +118,9 @@
 		1FCC678D2A641210002AA4C9 /* toshickstudy */ = {
 			isa = PBXGroup;
 			children = (
+				1F15487B2A657A660034DAF9 /* detail */,
+				1F15487A2A6578A00034DAF9 /* top */,
 				1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */,
-				1FCC67902A641210002AA4C9 /* ContentView.swift */,
-				1F1548782A65091C0034DAF9 /* MapView.swift */,
-				1F1548762A6506910034DAF9 /* CircleImage.swift */,
 				1FCC67922A641212002AA4C9 /* Assets.xcassets */,
 				1FCC67942A641212002AA4C9 /* Preview Content */,
 			);
@@ -263,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCC67912A641210002AA4C9 /* ContentView.swift in Sources */,
+				1FCC67912A641210002AA4C9 /* TopView.swift in Sources */,
 				1F1548792A65091C0034DAF9 /* MapView.swift in Sources */,
 				1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */,
+				1F15487D2A657A8D0034DAF9 /* DetailView.swift in Sources */,
 				1F1548772A6506920034DAF9 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
