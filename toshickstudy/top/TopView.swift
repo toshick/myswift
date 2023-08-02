@@ -11,6 +11,7 @@ import SwiftUI
 struct TopView: View {
   @State private var shouldShowSecondView: Bool = false
   @State private var showSheet: Bool = false
+  @ObservedObject var mystore = MyStore(name: "John Appleseed", age: 24)
 
   var body: some View {
     NavigationStack {
@@ -28,10 +29,45 @@ struct TopView: View {
             .foregroundColor(.accentColor)
 
           NavigationLink {
-            DetailView()
+            DetailView(mystore: mystore)
           } label: {
             Text("next testAview")
           }.padding(30)
+
+          HStack {
+            Text("ねんれい  \(mystore.age)")
+            Button {
+              _ = mystore.haveBirthday()
+            } label: {
+              Text("ついか")
+            }
+          }
+          ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .top, spacing: 0) {
+              ForEach(mystore.posts) { post in
+                VStack(alignment: .leading) {
+                  // Circle()
+                  //   .frame(width: 200, height: 200)
+                  //   .foregroundColor(.white)
+                  AsyncImage(url: URL(string: post.image)) { image in
+                    image.resizable()
+                      .scaledToFill().frame(width: 200, height: 200).clipShape(Circle())
+                  } placeholder: {
+                    Text("image")
+                  }
+                  // Text(post.id)
+                  //   .foregroundColor(.primary)
+                  //   .font(.caption)
+                  Text(post.title)
+                    .foregroundColor(.primary)
+                    .font(.caption)
+                  Text(post.dateDisp)
+                    .foregroundColor(.primary)
+                    .font(.caption)
+                }.padding(15)
+              }
+            }
+          }
 
           TableView()
             .frame(height: 200)

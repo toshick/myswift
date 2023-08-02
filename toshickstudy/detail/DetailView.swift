@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
   @Environment(\.dismiss) var dismiss
   @State private var isPlaying: Bool = false
+  @ObservedObject var mystore: MyStore
 
   var body: some View {
     VStack {
@@ -20,10 +21,16 @@ struct DetailView: View {
 
       Text("親のisPlayingの状態  \(isPlaying ? "いえす" : "ノー")")
 
+      Text("ねんれい  \(mystore.age)")
+
       // 自作ボタン
       MyButton(label: "とじる") {
         dismiss()
       }
+
+      Button("Sign In", action: {
+        dismiss()
+      })
 
       Spacer()
       PlayButton(isPlaying: $isPlaying)
@@ -35,7 +42,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView()
+    DetailView(mystore: MyStore(name: "xxxx", age: 14))
   }
 }
 
