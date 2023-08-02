@@ -32,6 +32,8 @@ class MyStore: ObservableObject {
     posts.append(MyPost(title: "たいとる1", image: "https://www.newsweekjapan.jp/akane/assets_c/2021/12/akane211221_dogs2021-thumb-720x480-321854.jpg"))
     posts.append(MyPost(title: "たいとる2", image: "https://img.benesse-cms.jp/pet-dog/item/image/normal/c7f71f82-2934-418f-87eb-6f251fb31515.jpg?w=1200&h=1304&resize_type=cover&resize_mode=force"))
     posts.append(MyPost(title: "たいとる3", image: "https://m.media-amazon.com/images/I/616II7kATLL.jpg"))
+
+    posts.append(contentsOf: posts)
   }
 
   func haveBirthday() -> Int {
