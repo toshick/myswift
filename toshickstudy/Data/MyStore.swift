@@ -21,6 +21,21 @@ struct MyPost: Hashable, Codable, Identifiable {
   }
 }
 
+struct MyPosition {
+  public var id: String = UUID().uuidString
+  var title: String
+  var date: Date = .init()
+  var image: String
+
+  var dateDisp: String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ja_JP")
+    dateFormatter.dateStyle = .medium
+    dateFormatter.dateFormat = "yyyy-MM-dd hh:mm"
+    return dateFormatter.string(from: date)
+  }
+}
+
 class MyStore: ObservableObject {
   @Published var name: String
   @Published var age: Int

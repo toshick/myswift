@@ -9,6 +9,9 @@ import MapKit
 import SwiftUI
 
 struct TopView: View {
+  @State private var alertNoPermissoin: Bool = false
+  @ObservedObject var manager = LocationManager()
+  @State var trackingMode = MapUserTrackingMode.follow // ユーザートラッキング追従モード
   @State private var shouldShowSecondView: Bool = false
   @State private var showSheet: Bool = false
   @ObservedObject var mystore = MyStore(name: "John Appleseed", age: 24)
@@ -17,47 +20,50 @@ struct TopView: View {
     NavigationStack {
       ScrollView {
         VStack {
-          MapView()
+//            MapView(manager: manager, trackingMode: $trackingMode)
+//            .frame(height: 300)
+
+          Map(coordinateRegion: $manager.region,
+              showsUserLocation: true, // マップ上にユーザーの場所を表示するオプションをBool値で指定
+              userTrackingMode: $trackingMode) // マップがユーザーの位置情報更新にどのように応答するかを決定
             .frame(height: 300)
-
-          CircleImage()
-            .offset(y: -130)
-            .padding(.bottom, -130)
-
-          Image(systemName: "globe")
-            .imageScale(.large)
-            .foregroundColor(.accentColor)
-
-          NavigationLink {
-            DetailView(mystore: mystore)
-          } label: {
-            Text("next testAview")
-          }.padding(30)
-
-          HStack {
-            Text("ねんれい  \(mystore.age)")
-            Button {
-              _ = mystore.haveBirthday()
-            } label: {
-              Text("ついか")
+            .edgesIgnoringSafeArea(.bottom)
+            .alert(isPresented: $manager.alertNoPermissoin) {
+              Alert(
+                title: Text("いちじょうほうもらえない"),
+                message: Text("くれないんだ"),
+                dismissButton: .default(Text("しかたなし"))
+              )
             }
+
+          Button {
+            manager.reloadRegion()
+          } label: {
+            Text("いちを取得")
           }
+          // Button {
+          //   alertNoPermissoin = !alertNoPermissoin
+          // } label: {
+          //   Text("alertNoPermissoin")
+          // }
+
+          // Text("latitude  \($manager.region.center.latitude)")
+
           ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .top, spacing: 0) {
               ForEach(mystore.posts) { post in
                 VStack(alignment: .leading) {
-                  // Circle()
-                  //   .frame(width: 200, height: 200)
-                  //   .foregroundColor(.white)
-                  AsyncImage(url: URL(string: post.image)) { image in
-                    image.resizable()
-                      .scaledToFill().frame(width: 200, height: 200).clipShape(Circle())
-                  } placeholder: {
-                    Text("image")
+                  NavigationLink {
+                    DetailView(mystore: mystore)
+                  } label: {
+                    AsyncImage(url: URL(string: post.image)) { image in
+                      image.resizable()
+                        .scaledToFill().frame(width: 200, height: 200).clipShape(Circle())
+                    } placeholder: {
+                      Text("image")
+                    }
                   }
-                  // Text(post.id)
-                  //   .foregroundColor(.primary)
-                  //   .font(.caption)
+
                   Text(post.title)
                     .foregroundColor(.primary)
                     .font(.caption)

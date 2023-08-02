@@ -13,6 +13,8 @@
 		1F1548812A66AEB70034DAF9 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548802A66AEB70034DAF9 /* TableView.swift */; };
 		1F1548842A66B53C0034DAF9 /* ScrollView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548832A66B53C0034DAF9 /* ScrollView1.swift */; };
 		1F1548872A66C66C0034DAF9 /* MyParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1548862A66C66C0034DAF9 /* MyParts.swift */; };
+		1F32FF7F2A7A6CF200798574 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF7E2A7A6CF200798574 /* Debug.swift */; };
+		1F32FF812A7A827500798574 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF802A7A827400798574 /* MapModel.swift */; };
 		1F518B482A72B33B00F0DD87 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F518B472A72B33B00F0DD87 /* MyStore.swift */; };
 		1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */; };
 		1FCC67912A641210002AA4C9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* TopView.swift */; };
@@ -47,6 +49,8 @@
 		1F1548802A66AEB70034DAF9 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		1F1548832A66B53C0034DAF9 /* ScrollView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView1.swift; sourceTree = "<group>"; };
 		1F1548862A66C66C0034DAF9 /* MyParts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyParts.swift; sourceTree = "<group>"; };
+		1F32FF7E2A7A6CF200798574 /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
+		1F32FF802A7A827400798574 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		1F518B472A72B33B00F0DD87 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		1FCC678B2A641210002AA4C9 /* toshickstudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toshickstudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyApp.swift; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 				1F1548782A65091C0034DAF9 /* MapView.swift */,
 				1F1548762A6506910034DAF9 /* CircleImage.swift */,
 				1F1548802A66AEB70034DAF9 /* TableView.swift */,
+				1F32FF7E2A7A6CF200798574 /* Debug.swift */,
 			);
 			path = top;
 			sourceTree = "<group>";
@@ -120,12 +125,24 @@
 			path = parts;
 			sourceTree = "<group>";
 		};
-		1F518B462A72B32000F0DD87 /* store */ = {
+		1F32FF7B2A7A67E700798574 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F1548822A66B51B0034DAF9 /* scroll */,
+				1F1548852A66C65B0034DAF9 /* parts */,
+				1F15487A2A6578A00034DAF9 /* top */,
+				1F15487B2A657A660034DAF9 /* detail */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F32FF7D2A7A686F00798574 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				1F518B472A72B33B00F0DD87 /* MyStore.swift */,
+				1F32FF802A7A827400798574 /* MapModel.swift */,
 			);
-			path = store;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		1FCC67822A641210002AA4C9 = {
@@ -151,11 +168,8 @@
 		1FCC678D2A641210002AA4C9 /* toshickstudy */ = {
 			isa = PBXGroup;
 			children = (
-				1F518B462A72B32000F0DD87 /* store */,
-				1F1548852A66C65B0034DAF9 /* parts */,
-				1F1548822A66B51B0034DAF9 /* scroll */,
-				1F15487B2A657A660034DAF9 /* detail */,
-				1F15487A2A6578A00034DAF9 /* top */,
+				1F32FF7D2A7A686F00798574 /* Data */,
+				1F32FF7B2A7A67E700798574 /* Views */,
 				1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */,
 				1FCC67922A641212002AA4C9 /* Assets.xcassets */,
 				1FCC67942A641212002AA4C9 /* Preview Content */,
@@ -319,7 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1548872A66C66C0034DAF9 /* MyParts.swift in Sources */,
+				1F32FF7F2A7A6CF200798574 /* Debug.swift in Sources */,
 				1F1548842A66B53C0034DAF9 /* ScrollView1.swift in Sources */,
+				1F32FF812A7A827500798574 /* MapModel.swift in Sources */,
 				1F518B482A72B33B00F0DD87 /* MyStore.swift in Sources */,
 				1FCC67912A641210002AA4C9 /* TopView.swift in Sources */,
 				1F1548812A66AEB70034DAF9 /* TableView.swift in Sources */,
@@ -488,6 +504,7 @@
 				DEVELOPMENT_TEAM = AH7Q7F7F9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "いちじょうほうください";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,6 +534,7 @@
 				DEVELOPMENT_TEAM = AH7Q7F7F9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "いちじょうほうください";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
