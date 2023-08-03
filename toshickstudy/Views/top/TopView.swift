@@ -37,9 +37,12 @@ struct TopView: View {
             }
 
           Button {
-            manager.reloadRegion()
+            // manager.reloadRegion()
+            print("fetchします")
+
+            mystore.fetchPosts()
           } label: {
-            Text("いちを取得")
+            Text("fetch posts")
           }
           // Button {
           //   alertNoPermissoin = !alertNoPermissoin
