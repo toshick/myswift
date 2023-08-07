@@ -24,7 +24,7 @@ struct Debug: View {
             .padding(.bottom, -130)
 
           NavigationLink {
-            DetailView(mystore: mystore, postId: "00001")
+            DetailView(mystore: mystore, post: MyPost(id: "000009", title: "たいとる", date: 99_999_999, image: ""))
           } label: {
             Text("next testAview")
           }.padding(30)

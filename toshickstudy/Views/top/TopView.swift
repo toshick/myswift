@@ -57,7 +57,7 @@ struct TopView: View {
               ForEach(mystore.posts) { post in
                 VStack(alignment: .leading) {
                   NavigationLink {
-                    DetailView(mystore: mystore, postId: post.id)
+                    DetailView(mystore: mystore, post: post)
                   } label: {
                     AsyncImage(url: URL(string: post.image)) { image in
                       image.resizable()

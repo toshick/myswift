@@ -11,7 +11,7 @@ struct DetailView: View {
   @Environment(\.dismiss) var dismiss
   @State private var isPlaying: Bool = false
   @ObservedObject var mystore: MyStore
-  @State var postId: String
+  @State var post: MyPost
 
   var body: some View {
     VStack {
@@ -20,19 +20,19 @@ struct DetailView: View {
         .padding()
       Spacer()
 
-      Text("親のisPlayingの状態  \(isPlaying ? "いえす" : "ノー")")
+      Text("postId  \(post.id)")
 
-      Text("ねんれい  \(mystore.age)")
-        Text("postId  \(postId)")
+      AsyncImage(url: URL(string: post.image)) { image in
+        image.resizable()
+          .scaledToFill().frame(width: 200, height: 200).clipShape(Circle())
+      } placeholder: {
+        Text("image")
+      }
 
       // 自作ボタン
       MyButton(label: "とじる") {
         dismiss()
       }
-
-      Button("Sign In", action: {
-        dismiss()
-      })
 
       Spacer()
       PlayButton(isPlaying: $isPlaying)
@@ -44,7 +44,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(mystore: MyStore(name: "xxxx", age: 14), postId: "00001")
+    DetailView(mystore: MyStore(name: "xxxx", age: 14), post: MyPost(id: "000009", title: "たいとる", date: 99_999_999, image: ""))
   }
 }
 
