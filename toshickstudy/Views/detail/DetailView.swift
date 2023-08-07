@@ -11,6 +11,7 @@ struct DetailView: View {
   @Environment(\.dismiss) var dismiss
   @State private var isPlaying: Bool = false
   @ObservedObject var mystore: MyStore
+  @State var postId: String
 
   var body: some View {
     VStack {
@@ -22,6 +23,7 @@ struct DetailView: View {
       Text("親のisPlayingの状態  \(isPlaying ? "いえす" : "ノー")")
 
       Text("ねんれい  \(mystore.age)")
+        Text("postId  \(postId)")
 
       // 自作ボタン
       MyButton(label: "とじる") {
@@ -42,7 +44,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
   static var previews: some View {
-    DetailView(mystore: MyStore(name: "xxxx", age: 14))
+    DetailView(mystore: MyStore(name: "xxxx", age: 14), postId: "00001")
   }
 }
 
