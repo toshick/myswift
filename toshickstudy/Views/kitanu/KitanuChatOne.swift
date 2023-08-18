@@ -9,42 +9,49 @@ import SwiftUI
 
 struct KitanuChatOne: View {
   var body: some View {
-    ZStack {
+    ZStack(alignment: .leading) {
       VStack(alignment: .leading) {
+        HStack(alignment: .top) {
+          Text("♡")
+            .frame(alignment: .leading)
+            .foregroundColor(.white)
+            .font(Font.system(size: 18))
+            .padding(.top, 8)
+          Spacer()
+          Text("せかいのカマレオ")
+            .frame(alignment: .leading)
+            .foregroundColor(.white)
+            .font(Font.system(size: 14))
+            .padding(.top, 8)
+
+          AsyncImage(url: URL(string: "https://pandanocoto.com/wp-content/uploads/2022/10/chameleon.jpg")) { image in
+            image.resizable()
+              .scaledToFill().frame(width: 40, height: 40).clipShape(Circle())
+          } placeholder: {
+            Text("image")
+          }
+
+        }.padding(.horizontal, 16).padding(.bottom, -16)
         Text("初弾を手動で排莢していたな 、 考え方はおかしくない。 たが 、 聞きかじっただけの行為を実践で試すもんじゃない。 だからジャム（弾詰まり）など起こすんだ")
           .foregroundColor(.gray)
           .frame(width: .infinity)
           .padding(.vertical, 16)
           .padding(.horizontal, 16)
           .background(.white)
-          .cornerRadius(12)
-          .padding(.leading, 16)
-          .padding(.trailing, 16)
+          .cornerRadius(6)
+          .padding(.horizontal, 16)
 
         // Spacer().frame(width: .infinity, height: 30)
-        VStack(alignment: .trailing) {
-          Text("2023.01.23")
+        HStack {
+          Text("2023.01.23 13:22")
+            .frame(maxWidth: .infinity, alignment: .leading)
             .font(Font.system(size: 14))
-
-            .border(Color.red, width: 1)
-        }.frame(width: .infinity)
-        // .position(x: 130, y: -10)
+            .foregroundColor(.white)
+            .padding(.horizontal, 20)
+        }
       }
-
-      AsyncImage(url: URL(string: "https://pandanocoto.com/wp-content/uploads/2022/10/chameleon.jpg")) { image in
-        image.resizable()
-          .scaledToFill().frame(width: 40, height: 40).clipShape(Circle())
-          .position(x: 30, y: -10)
-      } placeholder: {
-        Text("image")
-      }
-      Text("せかいのカマレオ")
-        .border(Color.red, width: 1)
-        .frame(alignment: .leading)
-        .font(Font.system(size: 14))
-        .position(x: 0, y: -16)
     }
-    .padding(.bottom, 32)
+    .padding(.bottom, 16)
   }
 }
 

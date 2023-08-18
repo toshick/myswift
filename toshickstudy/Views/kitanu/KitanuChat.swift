@@ -11,16 +11,31 @@ struct KitanuChat: View {
   var body: some View {
     ZStack {
       Image("bg-pat-1").resizable(resizingMode: .tile)
-      ScrollView {
-        VStack {
-          Spacer().frame(width: .infinity, height: 100)
-          KitanuChatOne()
-          KitanuChatOne()
-          KitanuChatOne()
-          KitanuChatOne()
+      VStack(spacing: 0) {
+        HStack {
+          Text("ヘッド")
         }
+        .frame(maxWidth: .infinity, maxHeight: 60)
+        .background(.white)
+        ScrollView {
+          VStack(spacing: 0) {
+            Spacer().frame(width: .infinity, height: 100)
+            KitanuChatOne()
+            KitanuChatOne()
+            KitanuChatOne()
+            KitanuChatOne()
+            KitanuChatOne()
+            KitanuChatOne()
+          }
+        }
+        HStack(spacing: 0) {
+          Text("ぼとむ")
+        }
+        .frame(maxWidth: .infinity, maxHeight: 60)
+        .background(.white)
       }
-    }.ignoresSafeArea()
+    }
+    // .ignoresSafeArea()
   }
 }
 
