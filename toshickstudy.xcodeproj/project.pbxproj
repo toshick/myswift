@@ -18,6 +18,8 @@
 		1F32FF842A8D13A700798574 /* Kitanu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF832A8D13A700798574 /* Kitanu.swift */; };
 		1F32FF862A8E5F3200798574 /* KitanuChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF852A8E5F3200798574 /* KitanuChat.swift */; };
 		1F32FF882A8E651D00798574 /* KitanuChatOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF872A8E651D00798574 /* KitanuChatOne.swift */; };
+		1F32FF8A2A8F9A9800798574 /* KitanuStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF892A8F9A9800798574 /* KitanuStore.swift */; };
+		1F32FF8C2A8FB22000798574 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F32FF8B2A8FB22000798574 /* ColorExtension.swift */; };
 		1F518B482A72B33B00F0DD87 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F518B472A72B33B00F0DD87 /* MyStore.swift */; };
 		1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */; };
 		1FCC67912A641210002AA4C9 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC67902A641210002AA4C9 /* TopView.swift */; };
@@ -57,6 +59,8 @@
 		1F32FF832A8D13A700798574 /* Kitanu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitanu.swift; sourceTree = "<group>"; };
 		1F32FF852A8E5F3200798574 /* KitanuChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitanuChat.swift; sourceTree = "<group>"; };
 		1F32FF872A8E651D00798574 /* KitanuChatOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitanuChatOne.swift; sourceTree = "<group>"; };
+		1F32FF892A8F9A9800798574 /* KitanuStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitanuStore.swift; sourceTree = "<group>"; };
+		1F32FF8B2A8FB22000798574 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1F518B472A72B33B00F0DD87 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		1FCC678B2A641210002AA4C9 /* toshickstudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toshickstudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toshickstudyApp.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 			children = (
 				1F518B472A72B33B00F0DD87 /* MyStore.swift */,
 				1F32FF802A7A827400798574 /* MapModel.swift */,
+				1F32FF892A8F9A9800798574 /* KitanuStore.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -160,6 +165,14 @@
 				1F32FF872A8E651D00798574 /* KitanuChatOne.swift */,
 			);
 			path = kitanu;
+			sourceTree = "<group>";
+		};
+		1F32FF8D2A8FB25300798574 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1F32FF8B2A8FB22000798574 /* ColorExtension.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		1FCC67822A641210002AA4C9 = {
@@ -185,6 +198,7 @@
 		1FCC678D2A641210002AA4C9 /* toshickstudy */ = {
 			isa = PBXGroup;
 			children = (
+				1F32FF8D2A8FB25300798574 /* Other */,
 				1F32FF7D2A7A686F00798574 /* Data */,
 				1F32FF7B2A7A67E700798574 /* Views */,
 				1FCC678E2A641210002AA4C9 /* toshickstudyApp.swift */,
@@ -360,7 +374,9 @@
 				1F32FF842A8D13A700798574 /* Kitanu.swift in Sources */,
 				1F1548792A65091C0034DAF9 /* MapView.swift in Sources */,
 				1FCC678F2A641210002AA4C9 /* toshickstudyApp.swift in Sources */,
+				1F32FF8C2A8FB22000798574 /* ColorExtension.swift in Sources */,
 				1F15487D2A657A8D0034DAF9 /* DetailView.swift in Sources */,
+				1F32FF8A2A8F9A9800798574 /* KitanuStore.swift in Sources */,
 				1F32FF882A8E651D00798574 /* KitanuChatOne.swift in Sources */,
 				1F1548772A6506920034DAF9 /* CircleImage.swift in Sources */,
 			);

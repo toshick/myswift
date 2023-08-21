@@ -78,12 +78,16 @@ struct TopView: View {
             }
           }
 
-          TableView()
-            .frame(height: 200)
+          NavigationLink {
+            Kitanu()
+          } label: {
+            KTNButton(label: "キータヌ", disabled: true)
+          }
+
           Button {
             showSheet = true
           } label: {
-            Text("シートをだす")
+            Text("kitanu")
           }.padding(20)
             .sheet(isPresented: $showSheet, content: {
               ScrollView1()

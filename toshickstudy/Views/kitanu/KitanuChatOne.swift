@@ -8,45 +8,48 @@
 import SwiftUI
 
 struct KitanuChatOne: View {
+  @State var chat: MyChat
+
   var body: some View {
     ZStack(alignment: .leading) {
       VStack(alignment: .leading) {
-        HStack(alignment: .top) {
-          Text("♡")
-            .frame(alignment: .leading)
-            .foregroundColor(.white)
-            .font(Font.system(size: 18))
-            .padding(.top, 8)
-          Spacer()
-          Text("せかいのカマレオ")
-            .frame(alignment: .leading)
-            .foregroundColor(.white)
-            .font(Font.system(size: 14))
-            .padding(.top, 8)
-
-          AsyncImage(url: URL(string: "https://pandanocoto.com/wp-content/uploads/2022/10/chameleon.jpg")) { image in
+        HStack {
+          AsyncImage(url: URL(string: chat.image)) { image in
             image.resizable()
-              .scaledToFill().frame(width: 40, height: 40).clipShape(Circle())
+              .scaledToFill()
+              .frame(width: 40, height: 40)
+              .clipShape(Circle())
+
           } placeholder: {
             Text("image")
           }
+          Text("\(chat.username)")
+            .frame(alignment: .leading)
+            .foregroundColor(.brown)
+            .font(Font.system(size: 14))
+          // .padding(.top, 8)
+          Spacer()
+          Text("♡")
+            .frame(alignment: .leading)
+            .foregroundColor(.brown)
+            .font(Font.system(size: 18))
 
-        }.padding(.horizontal, 16).padding(.bottom, -16)
-        Text("初弾を手動で排莢していたな 、 考え方はおかしくない。 たが 、 聞きかじっただけの行為を実践で試すもんじゃない。 だからジャム（弾詰まり）など起こすんだ")
+        }.padding(.horizontal, 16).padding(.bottom, -16).zIndex(1)
+        Text("\(chat.msg)")
           .foregroundColor(.gray)
           .frame(width: .infinity)
           .padding(.vertical, 16)
           .padding(.horizontal, 16)
-          .background(.white)
+          // .background(.white)
           .cornerRadius(6)
           .padding(.horizontal, 16)
 
         // Spacer().frame(width: .infinity, height: 30)
         HStack {
-          Text("2023.01.23 13:22")
-            .frame(maxWidth: .infinity, alignment: .leading)
+          Text("\(chat.dateDisp)")
+            .frame(maxWidth: .infinity, alignment: .trailing)
             .font(Font.system(size: 14))
-            .foregroundColor(.white)
+            .foregroundColor(.brown)
             .padding(.horizontal, 20)
         }
       }
@@ -55,8 +58,8 @@ struct KitanuChatOne: View {
   }
 }
 
-struct KitanuChatOne_Previews: PreviewProvider {
-  static var previews: some View {
-    KitanuChatOne()
-  }
-}
+// struct KitanuChatOne_Previews: PreviewProvider {
+//   static var previews: some View {
+//     KitanuChatOne()
+//   }
+// }
