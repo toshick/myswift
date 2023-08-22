@@ -25,6 +25,9 @@ struct KitanuChat: View {
             }
             TextField("はなすヌ", text: $inputext)
               .textFieldStyle(RoundedBorderTextFieldStyle())
+              .onSubmit {
+                chatstore.submit()
+              }
 
             Button(action: {
               // action?()

@@ -45,6 +45,10 @@ class KTNStore: ObservableObject {
       ))
     }
   }
+
+  func submit() {
+    print("そうしん")
+  }
 }
 
 // let john = Contact(name: "John Appleseed", age: 24)
